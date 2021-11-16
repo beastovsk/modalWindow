@@ -1,6 +1,6 @@
 function _createModal(options) {
     const modal = document.createElement('div')
-    
+
     modal.classList.add('myModal')
     modal.insertAdjacentHTML('afterbegin', `
         <div class="modal-overlay">
@@ -28,9 +28,19 @@ function _createModal(options) {
 
 $.modal = function(options) {
     const $modal = _createModal(options)
+    let ANIMATION_SPEED = 2000
 
     return {
-        open() {},
-        close() {}
+        open() {
+            $modal.classList.add('open')
+        },
+        close() {
+            $modal.classList.remove('open')
+            $modal.classList.add('close')
+
+            setTimeout(() => {
+                $modal.classList.remove('close')
+            }, ANIMATION_SPEED)
+        }
     }
 }
