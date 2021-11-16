@@ -1,4 +1,4 @@
-.vmodal .modal-overlay {
+.myModal .modal-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -7,14 +7,14 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.vmodal .modal-overlay .modal-window {
+.myModal .modal-overlay .modal-window {
   width: 600px;
   background: #fff;
   margin: 100px auto;
   border-radius: 6px;
 }
 
-.vmodal .modal-overlay .modal-window .modal-header {
+.myModal .modal-overlay .modal-window .modal-header {
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,11 +25,11 @@
   border-bottom: 1px solid #eee;
 }
 
-.vmodal .modal-overlay .modal-window .modal-header .closeBtn {
+.myModal .modal-overlay .modal-window .modal-header .closeBtn {
   cursor: pointer;
 }
 
-.vmodal .modal-overlay .modal-window .modal-body {
+.myModal .modal-overlay .modal-window .modal-body {
   font-size: 1.2rem;
   font-weight: 400;
   border-bottom: 1px solid #eee;
