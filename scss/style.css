@@ -1,1 +1,37 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.vmodal .modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.vmodal .modal-overlay .modal-window {
+  width: 600px;
+  background: #fff;
+  margin: 100px auto;
+  border-radius: 6px;
+}
+
+.vmodal .modal-overlay .modal-window .modal-header {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.vmodal .modal-overlay .modal-window .modal-header .closeBtn {
+  cursor: pointer;
+}
+
+.vmodal .modal-overlay .modal-window .modal-body {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-bottom: 1px solid #eee;
+}
+/*# sourceMappingURL=style.css.map */
