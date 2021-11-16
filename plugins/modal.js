@@ -4,14 +4,13 @@ function _createModal(options) {
     modal.classList.add('myModal')
     modal.insertAdjacentHTML('afterbegin', `
         <div class="modal-overlay">
-            <div class="modal-window">
+            <div class="modal-window" style="width: ${options.width}">
                 <div class="modal-header">
-                    <span>Modal window</span>
+                    <span>${options.title}</span>
                     <span class="closeBtn">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    ${options.content || ''}
                 </div>
                 <div class="modal-footer">
                     <button class="accept">Ok</button>
@@ -41,6 +40,19 @@ $.modal = function(options) {
             setTimeout(() => {
                 $modal.classList.remove('close')
             }, ANIMATION_SPEED)
+        },
+        closable() {
+            // Giving to us 'true' if window is open and reverse
+            if ($modal.classList.contains('open')) {
+                return true
+            } else {
+                return false
+            }
+        },
+        destroy() {
+            $modal.parentNode.removeChild($modal)
+            $modal.addEventListener('click', null)
+            destroyed = true
         }
     }
 }
