@@ -57,7 +57,7 @@ function _createModal(options) {
 
 $.modal = function(options) {
     const $modal = _createModal(options)
-    let ANIMATION_SPEED = 2000
+    let ANIMATION_SPEED = 200
     let destroyed = false
 
 
@@ -74,6 +74,9 @@ $.modal = function(options) {
 
             setTimeout(() => {
                 $modal.classList.remove('close')
+                if (typeof options.onClick === 'function') {
+                    options.onClick()
+                }
             }, ANIMATION_SPEED)
         }
     }
